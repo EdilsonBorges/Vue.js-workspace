@@ -17,3 +17,9 @@ Vue offers
 - Computed Properties
 - CSS Transitions & Animation
 - Custom Filters
+
+
+Composing with Components
+
+The component system is another important concept in Vue, because it’s an abstraction that allows
+us to build large-scale applications composed of small, self-contained, and often reusable components.
