@@ -41,5 +41,10 @@ If
 Show
 <p v-show="show">This is shown</p>
 For loop
-data: {users : [{name: 'Bob'}, {name: 'Kathy'}]}
+data: { show: true, users : [{name: 'Bob'}, {name: 'Kathy'}] }
 <li v-for="user in users">{{user.name}}</li>
+
+Class and Style binding
+<div v-bind:class="{active: isActive}"></div>
+<div v-bind:style="{color: activeColor}"></div>
+data: { isActive: true, activeColor: 'red' }
