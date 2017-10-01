@@ -32,4 +32,14 @@ examples:
     <span>{{msg}}</span> // basic interpolation
     <span v-text="msg"></span> // using the v-text directive
     <span v-html="msg"></span> // parses html
-    <span v-once="{{msg}}"></span> // one-time interpolation
+    <span v-once>{{msg}}</span> // one-time interpolation
+
+Conditional and Loops
+If
+<p v-if="show">This is shown</p>
+<p v-else>This is not</p>
+Show
+<p v-show="show">This is shown</p>
+For loop
+data: {users : [{name: 'Bob'}, {name: 'Kathy'}]}
+<li v-for="user in users">{{user.name}}</li>
