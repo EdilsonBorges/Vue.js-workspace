@@ -20,6 +20,11 @@ Vue offers
 
 
 Composing with Components
-
-The component system is another important concept in Vue, because it’s an abstraction that allows
+- The component system is another important concept in Vue, because it’s an abstraction that allows
 us to build large-scale applications composed of small, self-contained, and often reusable components.
+
+Directives
+- Special attributes with the v- prefix that does something to the DOM
+- Reactivley applies side effects to the DOM when the value of its expression changes
+<element v-directiveld="[argument:] expression [| filters...]">
+</element>
