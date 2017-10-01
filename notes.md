@@ -28,3 +28,8 @@ Directives
 - Reactivley applies side effects to the DOM when the value of its expression changes
 <element v-directiveld="[argument:] expression [| filters...]">
 </element>
+examples:
+    <span>{{msg}}</span> // basic interpolation
+    <span v-text="msg"></span> // using the v-text directive
+    <span v-html="msg"></span> // parses html
+    <span v-once="{{msg}}"></span> // one-time interpolation
