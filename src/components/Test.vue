@@ -1,7 +1,14 @@
 <template>
   <div class="test">
+    <input type="text" v-model="title"><br>
       <h1>{{title}}</h1>
-      <p>{{user.firstName}}</p>
+      <p v-if="showName">{{user.firstName}}</p>
+      <p v-else>Nobody</p>
+      <ul>
+        <li v-for="item in items">{{item.title}}</li>
+      </ul>
+      <button v-on:click="greet('Hello World')">Say Greeting</button>
+      <input type="text" v-on:keyup="pressKey" v-on:keyup.enter="enterHit">
   </div>
 </template>
 
@@ -14,10 +21,27 @@
           user: {
             firstName: 'John',
             lastName: 'Doe'
-          }
+          },
+          showName: false,
+          items: [
+            {title: 'Item 1'},
+            {title: 'Item 2'},
+            {title: 'Item 3'}
+          ]
+        }
+      },
+      methods: {
+        greet: function (greeting) {
+          alert(greeting)
+        },
+        pressKey: function (e) {
+          console.log(e.target.value)
+        },
+        enterHit: function () {
+          console.log('You hit enter')
         }
       }
-    }
+}
 </script>
 
 <style scoped>
