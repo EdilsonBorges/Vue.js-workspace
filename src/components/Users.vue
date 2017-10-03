@@ -26,21 +26,6 @@
       return {
         newUser: {},
         users: [
-          {
-            name: 'John Doe',
-            email: 'jdoe@gmail.com',
-            contacted: false
-          },
-          {
-            name: 'Steve smith',
-            email: 'ssmith@gmail.com',
-            contacted: false
-          },
-          {
-            name: 'Tom White',
-            email: 'tomwhite@gmail.com',
-            contacted: false
-          }
         ]
       }
     },
@@ -59,7 +44,7 @@
     },
     created: function () {
       this.$http.get('https://jsonplaceholder.typicode.com/users').then(function (response) {
-        console.log(response)
+        this.users = response.data
       })
     }
 }
