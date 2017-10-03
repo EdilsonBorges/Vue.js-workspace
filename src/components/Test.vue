@@ -14,12 +14,19 @@
       <br />
       <label>First Name: </label><input type="text" v-model="user.lastName">
       <h3>{{fullName}}</h3>
+      <h2>{{msg}}</h2>
   </div>
 </template>
 
 <script>
     export default {
       name: 'test',
+      props: {
+        msg: {
+          type: String,
+          default: 'Foobar'
+        }
+      },
       data () {
         return {
           title: 'Hello World',
